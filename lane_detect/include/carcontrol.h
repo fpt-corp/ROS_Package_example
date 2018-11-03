@@ -32,7 +32,7 @@ private:
 
     Point carPos;
 
-    float laneWidth = 50;
+    float laneWidth = 40;
 
     float minVelocity = 10;
     float maxVelocity = 50;
