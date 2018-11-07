@@ -20,5 +20,36 @@
 4. Install rosbridge-suite
     ```
     $ sudo apt-get install ros-<distro>-rosbridge-server
+    ```  
+    - Note that if you are using VirtualBox, you will need to do some addition [steps](https://github.com/siemens/ros-sharp/wiki/User_Inst_UbuntuOnOracleVM).
+
+5. Clone this repository
+    - Install `git` and `git-lfs` if you haven't
+    - `cd` to the `catkin` source folder
     ```
-5. [New version unity](https://drive.google.com/drive/folders/1V4V5Qegb8DfxDpzpgH0b572IA_mUgXBP?usp=sharing)
+    $ cd ~/catkin_ws/src
+    ```
+    - `clone` the repo
+    ```
+    $ git clone https://github.com/fpt-corp/ROS_Package_example [(optional) shorter_file_name]
+    ```
+6. `make` the `src` and run some ros nodes
+    - `cd` back to the workspace
+    ```
+    $ cd ~/catkin_ws
+    ```
+    - `make` the `src`
+    ```
+    $ catkin_make
+    ```
+    - Add the maked `src` to the terminal
+    ```
+    $ source devel/setup.bash
+    ```
+        + You will need to run these steps everytime you change "something".
+    - Launch ros nodes
+    ```
+    $ roslaunch lane_detect lane_detect.launch
+    ```
+    - You will need to leave this terminal as it is in order to run the simulator.
+- Now, let's run the [simulator](unity/README.md).
